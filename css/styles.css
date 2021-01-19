@@ -5,6 +5,7 @@
   --colour-headings: #1b0706;
   --colour-primary: #2584ff;
   --colour-secondary: #00d9ff;
+  --colour-border: #ccc;
 }
 
 /* STEP 2: SET THE TYPOGRAPHY */
@@ -239,6 +240,42 @@ p {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* INPUTS */
+
+.input {
+  border-radius: 50px;
+  border: 1px solid var(--colour-border);
+  color: var(--colour-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--colour-border);
+  border-radius: 50px;
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
