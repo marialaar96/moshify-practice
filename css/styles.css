@@ -283,11 +283,6 @@ p {
 
 /* CARDS */
 
-body {
-  width: 50%;
-  margin: auto;
-  padding: 50px;
-}
 .card {
   border-radius: 10px;
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
@@ -372,4 +367,18 @@ body {
   .plan__description {
     font-size: 1.7rem;
   }
+}
+
+/* MEDIA COMPONENT */
+
+.media {
+  display: flex;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  padding-top: 1rem;
 }
