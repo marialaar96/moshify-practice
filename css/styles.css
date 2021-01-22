@@ -50,6 +50,11 @@ p {
   margin: 0;
 }
 
+.constraint {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -580,4 +585,32 @@ p {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* BLOCKS */
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block--dark {
+  background-color: #000;
+  color: #7b858b;
+}
+
+.block--dark h2 {
+  color: #fff;
+}
+
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 6rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
