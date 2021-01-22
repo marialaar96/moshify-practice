@@ -50,6 +50,10 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .constraint {
   max-width: 1280px;
   margin: 0 auto;
@@ -613,4 +617,75 @@ p {
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 6rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+/* NAVIGATION BAR */
+
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.nav__logo {
+  height: 40px;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  border-bottom: 2px solid #222;
+  transition: background-color 0.5s;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.nav__item > a {
+  padding: 1rem;
+  color: #d2d0db;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.nav__item:hover {
+  background-color: rgb(61, 61, 61);
+}
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 0.8;
+  box-shadow: 0 0 30px 3px rgba(255, 255, 255, 0.514);
+  border-radius: 5px;
+}
+
+/* Make the nav list items on one line on bigger screens */
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 2rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border-bottom: 0;
+  }
+  .nav__item > a {
+    padding: 0.7rem 2rem;
+  }
 }
