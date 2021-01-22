@@ -3,7 +3,7 @@
   --colour-accent: #ff3400;
   --colour-bodytext: #918ca4;
   --colour-bodytext-darker: #5c5577;
-  --colour-headings: #1b0706;
+  --colour-headings: #211e5f;
   --colour-primary: #2584ff;
   --colour-secondary: #00d9ff;
   --colour-border: #ccc;
@@ -220,6 +220,12 @@ a {
   text-align: center;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
 .btn--primary {
   background: var(--colour-primary);
   color: #fff;
@@ -712,5 +718,48 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* DOMAIN BLOCK */
+
+.block-domain .input-group {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin: 4rem auto;
+  max-width: 700px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--colour-headings);
+  justify-items: center /* Horizontal alignment in a grid */;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 560px) {
+  .block-domain .input {
+    width: 60%;
+  }
+  .block-domain .btn {
+    width: 40%;
+  }
+
+  .block-domain .icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(10rem, 1fr)
+    ); /* Space is equally distributed if we add extra items to this grid */
   }
 }
