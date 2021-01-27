@@ -792,3 +792,29 @@ a {
   max-width: 500px;
   margin: 0 auto;
 }
+
+/* FEATURES */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin: 6rem 0;
+}
+
+.feature__image img {
+  width: 100%;
+}
+
+.feature .icon-container,
+.feature .feature__text {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2; /* By default the order of the elements in the container is 1, the first element comes before the second, by setting it to 2, now the first element is in the 2nd position and 1st position is taken by the second element */
+  }
+}
