@@ -17,6 +17,11 @@
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
+::selection {
+  background: var(--colour-primary);
+  color: #fff;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -45,6 +50,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -146,7 +152,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--colour-headings);
 }
 
 .list--inline .list__item {
@@ -157,6 +162,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--colour-headings);
 }
 
 .list--tick .list__item {
@@ -425,6 +431,7 @@ a {
 
 .media {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .media__body {
@@ -631,7 +638,9 @@ a {
   color: #7b858b;
 }
 
+.block--dark h1,
 .block--dark h2,
+.block--dark h3,
 .block--dark .block__heading {
   color: #fff;
 }
@@ -816,5 +825,29 @@ a {
 @media screen and (min-width: 768px) {
   .feature:nth-of-type(even) .feature__content {
     order: 2; /* By default the order of the elements in the container is 1, the first element comes before the second, by setting it to 2, now the first element is in the 2nd position and 1st position is taken by the second element */
+  }
+}
+
+/* SHOWCASE */
+
+.showcase .showcase__image > img {
+  width: 100%;
+}
+
+.showcase .media__image {
+  padding-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  /* We want the grid columns to be the same size and the tablet image should be the same size and go outside of the screen when sized down */
+  .showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .showcase .showcase__image {
+    justify-self: end;
+  }
+  .showcase .showcase__image > img {
+    width: auto;
+    max-width: 700px;
   }
 }
